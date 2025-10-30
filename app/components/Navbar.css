@@ -1,0 +1,417 @@
+.top-bar { 
+  background-color: #9d0606; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+  text-transform: uppercase; 
+  letter-spacing: 0.5px; 
+}
+
+.navbar {
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-left .logo {
+  width: 90px;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* === Center Section === */
+.navbar-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+/* === Right Section === */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-right svg {
+  font-size: 18px;
+  color: #222;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-right svg:hover {
+  transform: scale(1.1);
+  color: #222;
+}
+
+.wishlist-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.wishlist-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: red;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🧩 Smooth Transition for Everything */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 💻 Desktop (default >1024px) */
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 18px 60px;
+  }
+  .brand-text {
+    font-size: 20px;
+  }
+  .nav-links {
+    gap: 40px;
+    font-size: 15px;
+  }
+  .navbar-left .hamburger {
+    display: none;
+  }
+  .hamburger{ display:none; }
+}
+
+/* 📲 Tablet (609px–1024px) */
+@media (min-width: 609px) and (max-width: 1024px) {
+  .top-bar { display: none; }
+  body::before {
+    content: "upto 30% Discount"; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: #9d0606; 
+    color: #fff;
+    font-size: 14px; 
+    font-weight: 500;
+    padding: 8px 0; 
+    font-family: "Poppins", sans-serif;
+    gap: 6px;
+  }
+  .hamburger{ display:none; }
+
+  .navbar {
+    padding: 16px 30px;
+  }
+
+  .navbar-left .logo {
+    width: 70px;
+  }
+
+  .brand-text {
+    font-size: 18px;
+  }
+
+  .nav-links li {
+    font-size: 11px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .navbar-right svg {
+    font-size: 14px;
+  }
+}
+
+/* 📱 Mobile (<608px) */
+@media (max-width: 608px) {
+  .top-bar { display: none; }
+  body::before { 
+        content: "upto 30% Discount"; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: #9d0606; 
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0; 
+    font-family: "Poppins", sans-serif;
+    gap: 6px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+
+  .navbar-left .logo {
+    width: 30px;
+    height: auto;
+  }
+
+  .navbar-left .hamburger {
+    width: 24px;
+    height: 22px;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .nav-links { display: none; }
+
+  .brand-text {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .navbar-right .profile-icon,
+  .navbar-right .mode {
+    display: none;
+  }
+  .search-form input {
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 100px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+    color: #000;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #ff4d4d;
+}
+
+.search-form {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+  z-index: 1000;
+  width:220px;
+  margin-left: 20px;
+}
+
+
+}
+
+/* ============================= */
+/* 📱 Sidebar (Hamburger Menu) */
+/* ============================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100vh;
+  background-color: #f6f3f3;
+  color: #101010;
+  padding: 25px 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.close-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #f39c12;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  padding: 12px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-links li:hover {
+  color: #f39c12;
+  transform: translateX(5px);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* ======================== */
+/* 🔍 Search Bar Animation */
+/* ======================== */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #ff4d4d;
+}
+
+.search-form {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+  z-index: 1000;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 180px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+    color: #000;
+}
+
+.close-search {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-search:hover {
+  color: #ff4d4d;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
